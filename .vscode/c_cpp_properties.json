@@ -1,21 +1,19 @@
 {
     "configurations": [
         {
-            "name": "Glanz",
+            "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/.vscode/include"
+                "/opt/homebrew/include/**"
             ],
-            "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE"
+            "defines": [],
+            "macFrameworkPath": [
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
             ],
-            "windowsSdkVersion": "10.0.19041.0",
-            "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.30.30705/bin/Hostx64/x64/cl.exe",
+            "compilerPath": "/usr/local/bin/g++",
             "cStandard": "c17",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "windows-msvc-x64"
+            "cppStandard": "c++14",
+            "intelliSenseMode": "macos-gcc-arm64"
         }
     ],
     "version": 4
