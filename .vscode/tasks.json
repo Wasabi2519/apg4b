@@ -1,18 +1,33 @@
 {
+    "version": "2.0.0",
     "tasks": [
+        {
+            "label": "Build with gcc",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-std=c++17",
+                "-gdwarf-3",
+                "test.cpp",
+                "-o",
+                "a.out",
+                "--debug"
+            ],
+            "group": "build"
+        },
         {
             "type": "cppbuild",
             "label": "C/C++: g++ アクティブなファイルのビルド",
-            "command": "C:\\usr\\bin\\g++",
+            "command": "/opt/homebrew/bin/g++",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}/${fileBasenameNoExtension}"
             ],
             "options": {
-                "cwd": "C:\\usr\\bin"
+                "cwd": "${fileDirname}"
             },
             "problemMatcher": [
                 "$gcc"
@@ -23,6 +38,5 @@
             },
             "detail": "デバッガーによって生成されたタスク。"
         }
-    ],
-    "version": "2.0.0"
+    ]
 }
